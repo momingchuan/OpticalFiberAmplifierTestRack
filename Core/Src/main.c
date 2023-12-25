@@ -73,6 +73,7 @@ unsigned char UART6_RX_BUF[RECEIVE_DATA_BUF_LEN_USART6];
 
 
 
+
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
