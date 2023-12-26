@@ -836,8 +836,6 @@ char *GetMultimeter(unsigned char C_V, unsigned short int OutTime) //0是DC电流，
 
 
 
-
-
 //参数1：SetOrGet->0为设定电压数值
 //参数2：1设定电流，2(获取输出电压、功率、电流)
 char *SetPower(float SetValue, unsigned char Set_V0_C1_Get2, unsigned short int OutTime)
