@@ -29,7 +29,7 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "config.h"
-#include "stdio.h"	//Ê¹ÓÃprintfº¯ÊýÐèÒýÓÃµÄÍ·ÎÄ¼þ
+#include "stdio.h"	//Ê¹ï¿½ï¿½printfï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ãµï¿½Í·ï¿½Ä¼ï¿½
 #include <string.h> 
 #include  <stdio.h>
 #include <stdlib.h>
@@ -51,6 +51,9 @@ comVariableBlockType comVariableBlock;
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
+
+
+
 
 
 
@@ -131,23 +134,23 @@ int main(void)
   /* USER CODE BEGIN 2 */
 //  	PWR_PVD();
 
-	HAL_UART_Receive_DMA(&UART_HANDLE_SCREEN, UART1_RX_BUF, RECEIVE_DATA_BUF_LEN_USART1);  // Æô¶¯DMA½ÓÊÕ
-	__HAL_UART_ENABLE_IT(&UART_HANDLE_SCREEN, UART_IT_IDLE);              // Ê¹ÄÜ¿ÕÏÐÖÐ¶Ï
+	HAL_UART_Receive_DMA(&UART_HANDLE_SCREEN, UART1_RX_BUF, RECEIVE_DATA_BUF_LEN_USART1);  // ï¿½ï¿½ï¿½ï¿½DMAï¿½ï¿½ï¿½ï¿½
+	__HAL_UART_ENABLE_IT(&UART_HANDLE_SCREEN, UART_IT_IDLE);              // Ê¹ï¿½Ü¿ï¿½ï¿½ï¿½ï¿½Ð¶ï¿½
 	
-	HAL_UART_Receive_IT(&UART_HANDLE_POWER,UART3_RX_BUF,RECEIVE_DATA_BUF_LEN_USART3);//¿ªÆô½ÓÊÕ
-	__HAL_UART_ENABLE_IT(&UART_HANDLE_POWER, UART_IT_IDLE);              // Ê¹ÄÜ¿ÕÏÐÖÐ¶Ï
+	HAL_UART_Receive_IT(&UART_HANDLE_POWER,UART3_RX_BUF,RECEIVE_DATA_BUF_LEN_USART3);//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	__HAL_UART_ENABLE_IT(&UART_HANDLE_POWER, UART_IT_IDLE);              // Ê¹ï¿½Ü¿ï¿½ï¿½ï¿½ï¿½Ð¶ï¿½
 	
-	HAL_UART_Receive_IT(&UART_HANDLE_MULTIMETER,UART6_RX_BUF,RECEIVE_DATA_BUF_LEN_USART6);//¿ªÆô½ÓÊÕ
-	__HAL_UART_ENABLE_IT(&UART_HANDLE_MULTIMETER, UART_IT_IDLE);              // Ê¹ÄÜ¿ÕÏÐÖÐ¶Ï
+	HAL_UART_Receive_IT(&UART_HANDLE_MULTIMETER,UART6_RX_BUF,RECEIVE_DATA_BUF_LEN_USART6);//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	__HAL_UART_ENABLE_IT(&UART_HANDLE_MULTIMETER, UART_IT_IDLE);              // Ê¹ï¿½Ü¿ï¿½ï¿½ï¿½ï¿½Ð¶ï¿½
 
 	
-	HAL_UART_Receive_DMA(&UART_HANDLE_SENSOR,UART4_RX_BUF,RECEIVE_DATA_BUF_LEN_USART4);//¿ªÆô½ÓÊÕ
-	__HAL_UART_ENABLE_IT(&UART_HANDLE_SENSOR, UART_IT_IDLE);              // Ê¹ÄÜ¿ÕÏÐÖÐ¶Ï
+	HAL_UART_Receive_DMA(&UART_HANDLE_SENSOR,UART4_RX_BUF,RECEIVE_DATA_BUF_LEN_USART4);//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	__HAL_UART_ENABLE_IT(&UART_HANDLE_SENSOR, UART_IT_IDLE);              // Ê¹ï¿½Ü¿ï¿½ï¿½ï¿½ï¿½Ð¶ï¿½
 	
 
 	HAL_TIM_Base_Start_IT(&htim4);
 	
-//	for(int i=0; i<255;i++) //´æ´¢Êý¾Ý²âÊÔ³õÊ¼»¯
+//	for(int i=0; i<255;i++) //ï¿½æ´¢ï¿½ï¿½ï¿½Ý²ï¿½ï¿½Ô³ï¿½Ê¼ï¿½ï¿½
 //	{		
 //		DATA_store.DATA_Transmit_eeprom[i]=i;
 //		
@@ -157,7 +160,7 @@ int main(void)
 //	 SaveData_EX();
 
 	ReadData_EX();
-	Motor = RANGE_PWM_MID;//·¶Î§84-99
+	Motor = RANGE_PWM_MID;//ï¿½ï¿½Î§84-99
 
 	PWMSetCurrent(0,20);
 	PWMSetCurrent(1,20);
